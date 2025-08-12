@@ -1,0 +1,17 @@
+.card {
+  border-radius: 10px;
+}
+
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+input,
+select {
+  box-shadow: none !important;
+}

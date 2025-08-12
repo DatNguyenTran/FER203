@@ -31,7 +31,6 @@ function App() {
     } else if (sortOption === "period") {
       result.sort((a, b) => a.end - a.start - (b.end - b.start));
     }
-
     setFilteredCompanies(result);
   };
 

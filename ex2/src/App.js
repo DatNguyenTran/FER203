@@ -10,7 +10,6 @@ export default function App() {
   return (
     <div className="container mt-4">
       <h1 className="text-center mb-4">Person Management</h1>
-
       <div className="row g-4">
         <div className="col-md-6">
           <div className="card p-3 shadow-sm h-100">

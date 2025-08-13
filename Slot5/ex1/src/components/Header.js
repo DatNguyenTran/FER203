@@ -1,31 +1,59 @@
-import React from 'react';
-import { Navbar, Nav, Button, Container } from 'react-bootstrap';
-import { FaLeaf } from 'react-icons/fa';
-import './Header.css';
+import React from "react";
+import { Navbar, Nav, Container, Button, Badge } from "react-bootstrap";
 
-const Header = () => {
+function Header({ favouritesCount, onShowForm, onBrowse }) {
   return (
-    <Navbar bg="white" expand="lg" className="header-navbar">
+    <Navbar
+      bg="light"
+      variant="light"
+      expand="lg"
+      sticky="top"
+      className="shadow-sm"
+    >
       <Container>
-        <Navbar.Brand href="#home" className="brand">
-          <FaLeaf className="leaf-icon" />
-          <span className="brand-text">Healthy Recipe Finder</span>
-        </Navbar.Brand>
-        
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto">
-            <Nav.Link href="#home" className="nav-link">Home</Nav.Link>
-            <Nav.Link href="#about" className="nav-link">About</Nav.Link>
-            <Nav.Link href="#recipes" className="nav-link active">Recipes</Nav.Link>
+        <Navbar.Brand href="#">Healthy Recipes Finder</Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="nav" />
+        <Navbar.Collapse id="nav">
+          <Nav className="mx-auto align-items-center">
+            <Nav.Link href="#">Home</Nav.Link>
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#recipe-grid">Recipes</Nav.Link>
+
+            <Button
+              variant="outline-success"
+              size="sm"
+              onClick={onShowForm}
+              style={{ marginLeft: "8px" }}
+            >
+              Recipe Request Form
+            </Button>
           </Nav>
-          <Button variant="success" className="browse-btn">
-            Browse recipes
-          </Button>
+
+          <Nav className="align-items-center">
+            <Nav.Link className="text-nowrap">
+              ❤️ Favourites{" "}
+              <Badge
+                bg="dark"
+                text="light"
+              >
+                {favouritesCount}
+              </Badge>
+            </Nav.Link>
+
+            <Button
+              variant="dark"
+              onClick={onBrowse}
+              className="text-nowrap"
+              style={{ marginLeft: "8px" }}
+            >
+              Browse recipes
+            </Button>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
+}
 
 export default Header;

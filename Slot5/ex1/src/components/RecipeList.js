@@ -1,25 +1,26 @@
-import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import RecipeCard from './RecipeCard';
-import './RecipeList.css';
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import RecipeCard from "./RecipeCard";
 
-const RecipeList = ({ recipes, onViewRecipe }) => {
+function RecipeList({ recipes, onViewRecipe, onAddFavourite }) {
   return (
-    <section className="recipe-list-section">
-      <Container>
-        <Row>
-          {recipes.map((recipe, index) => (
-            <Col key={index} lg={4} md={6} className="mb-4">
-              <RecipeCard 
-                recipe={recipe} 
-                onViewRecipe={onViewRecipe}
-              />
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+    <Row
+      xs={1}
+      md={2}
+      lg={3}
+      className="g-4"
+    >
+      {recipes.map((recipe, index) => (
+        <Col key={index}>
+          <RecipeCard
+            recipe={recipe}
+            onViewRecipe={onViewRecipe}
+            onAddFavourite={onAddFavourite}
+          />
+        </Col>
+      ))}
+    </Row>
   );
-};
+}
 
 export default RecipeList;

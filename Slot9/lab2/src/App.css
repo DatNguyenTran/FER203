@@ -1,0 +1,259 @@
+/* ==== NAVBAR ==== */
+.navbar.mx-navbar {
+  background: linear-gradient(90deg, #6d28d9, #4f46e5, #0ea5e9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.navbar.mx-navbar .navbar-brand,
+.navbar.mx-navbar .nav-link {
+  color: #f3f4f6;
+}
+
+.navbar.mx-navbar .nav-link {
+  opacity: 0.92;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.navbar.mx-navbar .nav-link:hover {
+  opacity: 1;
+}
+
+.navbar.mx-navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 6px;
+  height: 3px;
+  background: #fcd34d;
+  border-radius: 99px;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: conic-gradient(from 210deg, #c084fc, #818cf8, #38bdf8);
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.brand-icon:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+/* ==== CAROUSEL ==== */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100% 100%;
+}
+
+/* ==== MOVIE CARDS ==== */
+.card {
+  border: none;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 2/3;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Badge genre */
+.badge {
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding: 0.4em 0.6em;
+  border-radius: 0.5rem;
+}
+
+/* Limit text lines */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==== FILTER BAR ==== */
+.filter-bar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+/* ==== CONTAINER MARGIN ==== */
+.mx-container {
+  margin-top: 100px; /* tránh navbar fixed che mất */
+}
+
+/* ==== BUTTON ==== */
+.btn {
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+/* Nút Add to Favourites */
+.btn-add-fav {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+.btn-add-fav:active {
+  transform: scale(0.95);
+}
+
+.btn-add-fav:hover {
+  background-color: #c82333 !important;
+  border-color: #bd2130 !important;
+}
+
+.btn-remove-fav {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+  color: white !important;
+}
+
+.btn-remove-fav:hover {
+  background-color: #5a6268 !important;
+  border-color: #545b62 !important;
+}
+/* NAVBAR gradient tím–xanh (đang dùng) */
+.navbar.mx-navbar {
+  background: linear-gradient(90deg, #6d28d9, #4f46e5, #0ea5e9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+.navbar.mx-navbar .navbar-brand,
+.navbar.mx-navbar .nav-link {
+  color: #f3f4f6;
+}
+.navbar.mx-navbar .nav-link {
+  opacity: 0.92;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+.navbar.mx-navbar .nav-link:hover {
+  opacity: 1;
+}
+.navbar.mx-navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 6px;
+  height: 3px;
+  background: #fcd34d;
+  border-radius: 99px;
+}
+
+/* ===== SEARCH PILL ===== */
+.search-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  padding: 0.55rem 0.75rem 0.55rem 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.search-pill:focus-within {
+  background: #fff;
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: 0 8px 22px rgba(14, 165, 233, 0.18);
+}
+.search-icon {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+.search-input {
+  appearance: none;
+  outline: none;
+  border: 0;
+  background: transparent;
+  width: 100%;
+  font-size: 0.98rem;
+}
+.clear-btn {
+  appearance: none;
+  border: 0;
+  background: rgba(0, 0, 0, 0.06);
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.clear-btn:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+.clear-btn:active {
+  transform: scale(0.96);
+}
+
+/* Elevated selects để đồng bộ với search pill */
+.select-elevated {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 0.6rem 0.75rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+.select-elevated:focus {
+  border-color: rgba(14, 165, 233, 0.45);
+  box-shadow: 0 8px 22px rgba(14, 165, 233, 0.18);
+}

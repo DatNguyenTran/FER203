@@ -1,0 +1,81 @@
+/* Toàn trang */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 25px;
+  background: #ffffffcc;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Tiêu đề */
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #2d2d2d;
+}
+
+/* Avatar */
+.avatar {
+  width: 120px;
+  height: 120px;
+  margin: 15px 0;
+  border-radius: 50%;
+  border: 4px solid #4a90e2;
+  object-fit: cover;
+}
+
+/* Label + input */
+form label {
+  display: block;
+  margin: 15px 0;
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border: 1px solid #4a90e2;
+  outline: none;
+}
+
+/* Nút */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #4a90e2;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #357ab8;
+}

@@ -1,0 +1,176 @@
+/* App.css */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Saved Profiles Section Styles */
+.saved-profiles-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.saved-profiles-section h3 {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.profile-card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card .card-body {
+  padding: 1.5rem;
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+}
+
+.profile-avatar img {
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-details p {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+}
+
+.profile-details i {
+  width: 16px;
+  color: #0d6efd;
+}
+
+.profile-card .btn-outline-danger {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.profile-card .btn-outline-danger:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  transform: scale(1.1);
+}
+
+/* Empty state styling */
+.saved-profiles-section:empty {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .saved-profiles-section {
+    padding: 1.5rem;
+  }
+
+  .profile-card .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Animation for new profiles */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-card {
+  animation: slideInUp 0.5s ease-out;
+}
+
+/* Gradient background for section header */
+.saved-profiles-section h3 {
+  background: linear-gradient(135deg, #0d6efd, #6f42c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hover effects for profile cards */
+.profile-card:hover .profile-avatar img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Custom scrollbar for profile grid */
+.saved-profiles-section .row {
+  max-height: 400px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #0d6efd #f8f9fa;
+}
+
+.saved-profiles-section .row::-webkit-scrollbar {
+  width: 6px;
+}
+
+.saved-profiles-section .row::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 3px;
+}
+
+.saved-profiles-section .row::-webkit-scrollbar-thumb {
+  background: #0d6efd;
+  border-radius: 3px;
+}
+
+.saved-profiles-section .row::-webkit-scrollbar-thumb:hover {
+  background: #0b5ed7;
+}

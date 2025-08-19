@@ -1,0 +1,510 @@
+/* Modern Profile Wizard Modal Styles */
+.profile-wizard-modal .modal-content {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.profile-wizard-modal .modal-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-bottom: none;
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+.profile-wizard-modal .modal-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.profile-wizard-modal .modal-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.profile-wizard-modal .btn-close {
+  filter: invert(1);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.profile-wizard-modal .btn-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.profile-wizard-modal .modal-body {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 500px;
+}
+
+/* Enhanced Navigation Tabs */
+.profile-wizard-modal .nav-tabs {
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+}
+
+.profile-wizard-modal .nav-tabs .nav-link {
+  border: none;
+  color: #6c757d;
+  font-weight: 600;
+  background: transparent;
+  border-radius: 12px;
+  margin-right: 8px;
+  padding: 12px 20px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-wizard-modal .nav-tabs .nav-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.profile-wizard-modal .nav-tabs .nav-link:hover::before {
+  left: 100%;
+}
+
+.profile-wizard-modal .nav-tabs .nav-link.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  transform: translateY(-2px);
+}
+
+.profile-wizard-modal .nav-tabs .nav-link:disabled {
+  color: #adb5bd;
+  background: rgba(173, 181, 189, 0.2);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.profile-wizard-modal .nav-tabs .nav-link:hover:not(:disabled) {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  transform: translateY(-1px);
+}
+
+/* Enhanced Progress Bar */
+.profile-wizard-modal .progress {
+  height: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.profile-wizard-modal .progress-bar {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-wizard-modal .progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Enhanced Form Controls */
+.profile-wizard-modal .form-control,
+.profile-wizard-modal .form-select {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
+  color: #495057;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.profile-wizard-modal .form-control:focus,
+.profile-wizard-modal .form-select:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+.profile-wizard-modal .form-label {
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Enhanced Password Toggle Button */
+.profile-wizard-modal .btn-eye {
+  border: none;
+  background: rgba(102, 126, 234, 0.1);
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #667eea;
+  border-radius: 8px;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.profile-wizard-modal .btn-eye:hover {
+  background: rgba(102, 126, 234, 0.2);
+  color: #764ba2;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Enhanced Avatar */
+.profile-wizard-modal .avatar-preview {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.profile-wizard-modal .avatar-preview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profile-wizard-modal .avatar-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.profile-wizard-modal .avatar-placeholder:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Success Card */
+.profile-wizard-modal .success-card {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+.profile-wizard-modal .success-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="success-pattern" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23success-pattern)"/></svg>');
+  opacity: 0.3;
+}
+
+.profile-wizard-modal .success-card .card-body {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  margin: 8px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+.profile-wizard-modal .section-title {
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 0.75rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Enhanced Modal Footer */
+.profile-wizard-modal .modal-footer {
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1.5rem 2rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Enhanced Buttons */
+.profile-wizard-modal .btn {
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-wizard-modal .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.profile-wizard-modal .btn:hover::before {
+  left: 100%;
+}
+
+.profile-wizard-modal .btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.profile-wizard-modal .btn-primary:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+.profile-wizard-modal .btn-outline-primary {
+  color: #667eea;
+  border: 2px solid #667eea;
+  background: transparent;
+}
+
+.profile-wizard-modal .btn-outline-primary:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.3);
+}
+
+.profile-wizard-modal .btn-success {
+  background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(86, 171, 47, 0.3);
+}
+
+.profile-wizard-modal .btn-success:hover {
+  background: linear-gradient(135deg, #4a9a26 0%, #95d4b8 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(86, 171, 47, 0.4);
+}
+
+.profile-wizard-modal .btn-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+}
+
+.profile-wizard-modal .btn-secondary:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #343a40 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(108, 117, 125, 0.4);
+}
+
+/* Enhanced Typography */
+.profile-wizard-modal .text-muted {
+  color: #6c757d !important;
+  font-weight: 500;
+}
+
+.profile-wizard-modal .invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.profile-wizard-modal .form-control.is-invalid,
+.profile-wizard-modal .form-select.is-invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Enhanced Toast */
+.profile-wizard-modal .toast {
+  background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 15px 45px rgba(86, 171, 47, 0.3);
+  overflow: hidden;
+}
+
+.profile-wizard-modal .toast-header {
+  background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.profile-wizard-modal .toast-body {
+  background: linear-gradient(135deg, #56ab2f 0%, #a8e6cf 100%);
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Enhanced Headings */
+.profile-wizard-modal h4 {
+  color: #667eea;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #667eea;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.profile-wizard-modal h4::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.profile-wizard-modal h5 {
+  color: #667eea;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-wizard-modal p {
+  color: #495057;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.profile-wizard-modal strong {
+  color: #667eea;
+  font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-wizard-modal .modal-body {
+    padding: 1.5rem;
+  }
+
+  .profile-wizard-modal .nav-tabs .nav-link {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .profile-wizard-modal .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Loading Animation */
+.profile-wizard-modal .loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

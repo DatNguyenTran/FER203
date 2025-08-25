@@ -1,0 +1,179 @@
+/* Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white !important;
+}
+.navbar .nav-link,
+.navbar .dropdown-toggle {
+  color: white !important;
+  font-weight: 500;
+}
+.navbar .btn-danger {
+  background-color: #fff !important;
+  color: #ff4b2b !important;
+  border: none;
+  font-weight: 600;
+  padding: 5px 15px;
+}
+
+/* Hero slider */
+.hero-slider img {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Product grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+}
+
+/* Product card */
+.card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  height: 200px;
+  object-fit: contain;
+  background: #fdfdfd;
+}
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+.card .btn {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+.card .btn-success {
+  background: linear-gradient(90deg, #11998e, #38ef7d);
+  border: none;
+}
+.card .btn-outline-primary {
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+.card .btn-outline-primary:hover {
+  background: #007bff;
+  color: white;
+}
+.card .btn-danger {
+  background: #ff4b2b;
+  border: none;
+}
+
+/* Badge HOT */
+.badge {
+  font-size: 0.7rem;
+  padding: 6px 10px;
+  border-radius: 50px;
+}
+
+/* Table (cart/checkout) */
+table {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+table th {
+  background: #ff4b2b;
+  color: white;
+  text-align: center;
+}
+table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Form (login/register) */
+.container form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background: #212529;
+  color: #fff;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+}
+footer a {
+  color: #61dafb;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+/* HeroSlider */
+.hero-slider {
+  margin: 20px auto;
+  max-width: 1200px; /* Giới hạn khung */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.hero-slider .slider-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover; /* Cắt ảnh vừa khung */
+  border-radius: 12px;
+}
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* đẩy Footer xuống cuối */
+}

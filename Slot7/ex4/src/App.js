@@ -3,12 +3,12 @@ import UserProfile from "./components/UserProfile";
 import Welcome from "./components/Welcome";
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// Dùng Container, Row, Col để bố trí các Card
-import StudentCard from "./components/StudentCard"; // Import StudentCard component
+
+import StudentCard from "./components/StudentCard";
 
 function App() {
   const userData = { name: "traltb@fe.edu.vn", age: 39 };
-  const namesList = ["traltb@fe.edu.vn", "test@fe.edu.vn"]; //Danh sach students
+  const namesList = ["traltb@fe.edu.vn", "test@fe.edu.vn"];
   const students = [
     { name: "ronaldo@fe.edu.vn", age: 39, avatar: "/images/student1.jpg" },
     { name: "messi@fe.edu.vn", age: 40, avatar: "/images/student2.jpg" },

@@ -20,36 +20,14 @@
     },
     {
       "id": 3,
-      "fullName": "dat",
-      "username": "trannguyendat123kt@gmail.com",
-      "email": "dat@gmail.com",
+      "fullName": "trannguyendat",
+      "username": "dattran",
+      "email": "trannguyendat@gmail.com",
       "password": "Dat@250804",
       "secretQuestion": "Your first pet?",
       "answer": "dog",
       "wishlist": [],
-      "avatar": "blob:http://localhost:3000/7a3d09d3-0b1d-48ae-a87a-f30350d3c345"
-    },
-    {
-      "id": 4,
-      "fullName": "da",
-      "username": "tranngu@gmail.com",
-      "email": "tranngu@gmail.com",
-      "password": "Dat@250804",
-      "secretQuestion": "Your first pet?",
-      "answer": "dog",
-      "wishlist": [],
-      "avatar": "blob:http://localhost:3000/e05b0aca-c6b4-4e0a-b328-5c0c8749c5d8"
-    },
-    {
-      "id": 5,
-      "fullName": "dattran",
-      "username": "tranngu@gmail.com",
-      "email": "tranngu@gmail.com",
-      "password": "Dat@250804",
-      "secretQuestion": "Favorite color?",
-      "answer": "blue",
-      "wishlist": [],
-      "avatar": "blob:http://localhost:3000/a473dfc6-78b7-4c18-ae4f-58cfd9da380b"
+      "avatar": "blob:http://localhost:3000/4ea6761d-a343-4645-adf7-3b61b33df648"
     }
   ],
   "products": [
@@ -225,6 +203,85 @@
       ],
       "total": 699,
       "date": "8/25/2025, 10:11:36 PM"
+    },
+    {
+      "id": 1756140465436,
+      "userId": 4,
+      "items": [
+        {
+          "id": "1",
+          "title": "iPhone 15 Pro Max",
+          "name": "Apple",
+          "image": "/images/iphone15promax.jpg",
+          "price": 1199,
+          "salePrice": 1099,
+          "description": "Flagship Apple với chip A17 Pro, màn hình 6.7\" Super Retina XDR.",
+          "tags": [
+            "hot",
+            "sale"
+          ],
+          "qty": 1
+        }
+      ],
+      "total": 1199,
+      "date": "8/25/2025, 11:47:45 PM"
+    },
+    {
+      "id": 1756176249291,
+      "userId": "2",
+      "items": [
+        {
+          "id": "1",
+          "title": "iPhone 15 Pro Max",
+          "name": "Apple",
+          "image": "/images/iphone15promax.jpg",
+          "price": 1199,
+          "salePrice": 1099,
+          "description": "Flagship Apple với chip A17 Pro, màn hình 6.7\" Super Retina XDR.",
+          "tags": [
+            "hot",
+            "sale"
+          ],
+          "qty": 2
+        }
+      ],
+      "total": 2398,
+      "date": "8/26/2025, 9:44:09 AM"
+    },
+    {
+      "id": 1756263850807,
+      "userId": 3,
+      "items": [
+        {
+          "id": "2",
+          "title": "iPhone 14",
+          "name": "Apple",
+          "image": "/images/iphone14.jpg",
+          "price": 799,
+          "salePrice": 749,
+          "description": "Thiết kế quen thuộc, chip A15 Bionic, camera kép chất lượng.",
+          "tags": [
+            "sale"
+          ],
+          "qty": 1
+        },
+        {
+          "id": "1",
+          "title": "iPhone 15 Pro Max",
+          "name": "Apple",
+          "image": "/images/iphone15promax.jpg",
+          "price": 1199,
+          "salePrice": 1099,
+          "description": "Flagship Apple với chip A17 Pro, màn hình 6.7\" Super Retina XDR.",
+          "tags": [
+            "hot",
+            "sale"
+          ],
+          "qty": 1
+        }
+      ],
+      "total": 1998,
+      "date": "8/27/2025, 10:04:10 AM"
     }
   ]
 }

@@ -73,7 +73,7 @@ export function CartProvider({ children }) {
   return (
     <CartContext.Provider
       value={{
-        items: state.items || [], // đảm bảo không undefined
+        items: state.items || [],
         count,
         subtotal,
         addToCart: (product) =>

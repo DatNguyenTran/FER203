@@ -89,7 +89,7 @@ function Header() {
                   as={Link}
                   to="/register"
                 >
-                  Create Account
+                  Create an Account
                 </Nav.Link>
               </>
             )}

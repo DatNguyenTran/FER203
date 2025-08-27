@@ -83,6 +83,7 @@ function Cart() {
             </tbody>
           </Table>
           <h4>Tổng: ${subtotal}</h4>
+
           <Button
             variant="primary"
             onClick={handleCheckout}

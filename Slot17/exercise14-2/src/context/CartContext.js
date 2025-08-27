@@ -6,22 +6,24 @@ export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
   const [isPaid, setIsPaid] = useState(false);
 
-  const addToCart = (dish) => {
-    setCartItems((prevItems) => [...prevItems, dish]);
-  };
+  const addToCart = (dish) => setCartItems((prev) => [...prev, dish]);
 
-  const removeFromCart = (id) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
-  };
-
+  // sửa: dùng index thay vì id
+  const removeFromCart = (index) =>
+    setCartItems((prev) => prev.filter((_, i) => i !== index));
+  //// sửa: dùng  id
+  // const removeFromCart = (id) =>
+  //   setCartItems((prev) => prev.filter((item) => item.id !== id));
   const clearCart = () => {
     setCartItems([]);
     setIsPaid(false);
   };
 
   const confirmPayment = () => {
-    setIsPaid(true);
-    setCartItems([]); // sau khi thanh toán giỏ hàng rỗng
+    if (cartItems.length > 0) {
+      setIsPaid(true);
+      setCartItems([]);
+    }
   };
 
   const totalValue = cartItems
@@ -29,10 +31,8 @@ export const CartProvider = ({ children }) => {
     .toFixed(2);
 
   useEffect(() => {
-    const savedCart = JSON.parse(localStorage.getItem("cartItems"));
-    if (savedCart) {
-      setCartItems(savedCart);
-    }
+    const saved = localStorage.getItem("cartItems");
+    if (saved) setCartItems(JSON.parse(saved));
   }, []);
 
   useEffect(() => {
